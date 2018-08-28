@@ -21,6 +21,7 @@
 		FFD8D01F2135170C0064ED13 /* BadCase2UISCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8D01D2135170C0064ED13 /* BadCase2UISCVC.m */; };
 		FFD8D022213517C30064ED13 /* BadCase2UISCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD8D021213517C30064ED13 /* BadCase2UISCVC.xib */; };
 		FFD8D0252135205A0064ED13 /* CustomModalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8D0242135205A0064ED13 /* CustomModalAnimator.m */; };
+		FFD8D02821353CC60064ED13 /* DraggablePercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8D02721353CC60064ED13 /* DraggablePercentDrivenInteractiveTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		FFD8D021213517C30064ED13 /* BadCase2UISCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadCase2UISCVC.xib; sourceTree = "<group>"; };
 		FFD8D0232135205A0064ED13 /* CustomModalAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomModalAnimator.h; sourceTree = "<group>"; };
 		FFD8D0242135205A0064ED13 /* CustomModalAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomModalAnimator.m; sourceTree = "<group>"; };
+		FFD8D02621353CC60064ED13 /* DraggablePercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DraggablePercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		FFD8D02721353CC60064ED13 /* DraggablePercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DraggablePercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				FFD8D021213517C30064ED13 /* BadCase2UISCVC.xib */,
 				FFD8D0232135205A0064ED13 /* CustomModalAnimator.h */,
 				FFD8D0242135205A0064ED13 /* CustomModalAnimator.m */,
+				FFD8D02621353CC60064ED13 /* DraggablePercentDrivenInteractiveTransition.h */,
+				FFD8D02721353CC60064ED13 /* DraggablePercentDrivenInteractiveTransition.m */,
 			);
 			path = ModalPresentationCustom;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				FFD8D0092134E9040064ED13 /* main.m in Sources */,
 				FFD8D0252135205A0064ED13 /* CustomModalAnimator.m in Sources */,
 				FFD8D01A21350CDD0064ED13 /* SBModalViewController.m in Sources */,
+				FFD8D02821353CC60064ED13 /* DraggablePercentDrivenInteractiveTransition.m in Sources */,
 				FFD8CFFB2134E9010064ED13 /* AppDelegate.m in Sources */,
 				FFD8D0162134EC560064ED13 /* CustomModalPresentationController.m in Sources */,
 				FFD8D01F2135170C0064ED13 /* BadCase2UISCVC.m in Sources */,

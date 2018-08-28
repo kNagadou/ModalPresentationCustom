@@ -12,6 +12,7 @@
 #import "SBModalViewController.h"
 #import "CustomModalPresentationController.h"
 #import "CustomModalAnimator.h"
+#import "DraggablePercentDrivenInteractiveTransition.h"
 
 @interface ViewController ()
 <
@@ -25,7 +26,7 @@ typedef NS_ENUM(NSInteger, VCType){
     VCTypeGoodCase
 };
 @property (nonatomic) VCType type;
-
+@property (nonatomic, strong, nullable) DraggablePercentDrivenInteractiveTransition *interactiveAnimator;
 @end
 
 @implementation ViewController
@@ -44,6 +45,9 @@ typedef NS_ENUM(NSInteger, VCType){
     UIViewController *vc = [[SBModalViewController alloc] init];
     vc.modalPresentationStyle = UIModalPresentationCustom;
     vc.transitioningDelegate = self;
+    self.interactiveAnimator = [[DraggablePercentDrivenInteractiveTransition alloc] initWithAttachToViewController:vc
+                                                                                                        targetView:vc.view
+                                                                                           presentedViewController:nil];
     self.type = VCTypeGoodCase;
     [self presentViewController:vc animated:YES completion:^{
         // do not
@@ -54,6 +58,9 @@ typedef NS_ENUM(NSInteger, VCType){
     UIViewController *vc = [[BadCase1UISCVC alloc] init];
     vc.modalPresentationStyle = UIModalPresentationCustom;
     vc.transitioningDelegate = self;
+    self.interactiveAnimator = [[DraggablePercentDrivenInteractiveTransition alloc] initWithAttachToViewController:vc
+                                                                                                        targetView:vc.view
+                                                                                           presentedViewController:nil];
     self.type = VCTypeBadCase1;
     [self presentViewController:vc animated:YES completion:^{
         // do not
@@ -63,6 +70,9 @@ typedef NS_ENUM(NSInteger, VCType){
     UIViewController *vc = [[BadCase2UISCVC alloc] initWithConstraintTop:0];
     vc.modalPresentationStyle = UIModalPresentationCustom;
     vc.transitioningDelegate = self;
+    self.interactiveAnimator = [[DraggablePercentDrivenInteractiveTransition alloc] initWithAttachToViewController:vc
+                                                                                                        targetView:vc.view
+                                                                                           presentedViewController:nil];
     self.type = VCTypeBadCase2;
     [self presentViewController:vc animated:YES completion:^{
         // do not
@@ -72,6 +82,9 @@ typedef NS_ENUM(NSInteger, VCType){
     UIViewController *vc = [[BadCase2UISCVC alloc] initWithConstraintTop:44];
     vc.modalPresentationStyle = UIModalPresentationCustom;
     vc.transitioningDelegate = self;
+    self.interactiveAnimator = [[DraggablePercentDrivenInteractiveTransition alloc] initWithAttachToViewController:vc
+                                                                                                        targetView:vc.view
+                                                                                           presentedViewController:nil];
     self.type = VCTypeBadCase3;
     [self presentViewController:vc animated:YES completion:^{
         // do not
@@ -79,7 +92,9 @@ typedef NS_ENUM(NSInteger, VCType){
 }
 
 # pragma mark - UIViewControllerTransitioningDelegate
-- (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source
+- (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented
+                                                      presentingViewController:(UIViewController *)presenting
+                                                          sourceViewController:(UIViewController *)source
 {
     UIPresentationController *pc = [[CustomModalPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
     return pc;
@@ -112,7 +127,38 @@ typedef NS_ENUM(NSInteger, VCType){
             return animator;
         }
     }
-    
+}
+
+- (nullable id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    switch (self.type) {
+        case VCTypeBadCase1:{
+            return nil;
+        }
+        case VCTypeBadCase2:{
+            CustomModalAnimator *animator = [[CustomModalAnimator alloc] init];
+            animator.isPresenting = NO;
+            animator.needSetInset = YES;
+            return animator;
+        }
+        case VCTypeBadCase3: {
+            CustomModalAnimator *animator = [[CustomModalAnimator alloc] init];
+            animator.isPresenting = NO;
+            animator.needSetInset = NO;
+            return animator;
+        }
+        case VCTypeGoodCase: {
+            CustomModalAnimator *animator = [[CustomModalAnimator alloc] init];
+            animator.isPresenting = NO;
+            animator.needSetInset = NO;
+            return animator;
+        }
+    }
+}
+
+- (nullable id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator
+{
+    return self.interactiveAnimator.disableInteractiveTransition ? nil : self.interactiveAnimator;
 }
 
 @end
