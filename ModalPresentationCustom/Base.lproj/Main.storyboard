@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,67 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ba4-Ac-iYk">
+                                <rect key="frame" x="137.5" y="311" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="97c-xv-2UR"/>
+                                    <constraint firstAttribute="width" constant="100" id="SoQ-hB-mwS"/>
+                                </constraints>
+                                <state key="normal" title="Bad Case 1"/>
+                                <connections>
+                                    <action selector="handleTouchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mGS-sc-bLE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RQ-5a-0aA">
+                                <rect key="frame" x="137" y="355" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="DPU-lg-mjT"/>
+                                    <constraint firstAttribute="height" constant="44" id="S79-Y5-MwN"/>
+                                </constraints>
+                                <state key="normal" title="Bad Case2"/>
+                                <connections>
+                                    <action selector="handleTouchBadCase2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ty3-cU-Te2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWn-6I-Dyg">
+                                <rect key="frame" x="137" y="271" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="AKE-WH-ucP"/>
+                                    <constraint firstAttribute="height" constant="40" id="WJy-Az-EDe"/>
+                                </constraints>
+                                <state key="normal" title="Good Case"/>
+                                <connections>
+                                    <action selector="handleTouchGoodCaseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZsR-pG-a0A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B83-tw-mDm">
+                                <rect key="frame" x="137" y="399" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tkC-s1-VfV"/>
+                                    <constraint firstAttribute="width" constant="100" id="wKk-tS-yyE"/>
+                                </constraints>
+                                <state key="normal" title="Bad Case?"/>
+                                <connections>
+                                    <action selector="handleTouchBadCase3Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wOp-Ck-YB8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ba4-Ac-iYk" firstAttribute="top" secondItem="vWn-6I-Dyg" secondAttribute="bottom" id="27Q-R3-b81"/>
+                            <constraint firstItem="B83-tw-mDm" firstAttribute="top" secondItem="2RQ-5a-0aA" secondAttribute="bottom" id="4Ae-3q-aZB"/>
+                            <constraint firstItem="B83-tw-mDm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NsX-kS-HrC"/>
+                            <constraint firstItem="Ba4-Ac-iYk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OkO-xY-I3y"/>
+                            <constraint firstItem="2RQ-5a-0aA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QXk-Rr-Ksr"/>
+                            <constraint firstItem="Ba4-Ac-iYk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZJw-34-GPV"/>
+                            <constraint firstItem="vWn-6I-Dyg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cJR-JR-QL1"/>
+                            <constraint firstItem="2RQ-5a-0aA" firstAttribute="top" secondItem="Ba4-Ac-iYk" secondAttribute="bottom" id="w8o-mx-fn0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

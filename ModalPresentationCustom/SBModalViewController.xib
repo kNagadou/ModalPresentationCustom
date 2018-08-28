@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SBModalViewController">
+            <connections>
+                <outlet property="headerArea" destination="nDm-vN-Oab" id="B9K-sh-qib"/>
+                <outlet property="modalViewConstraintTop" destination="iK0-R2-Lsz" id="KdC-qa-xNP"/>
+                <outlet property="tableView" destination="FdM-IE-dNe" id="W4e-hG-7nX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAs-ci-ZXk">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FdM-IE-dNe">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="eex-Gu-GnX"/>
+                            </connections>
+                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDm-vN-Oab">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ap7-00-KbZ">
+                                    <rect key="frame" x="321" y="0.0" width="46" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="46" id="hkk-nN-Ai9"/>
+                                        <constraint firstAttribute="height" constant="44" id="pHN-s7-AoF"/>
+                                    </constraints>
+                                    <viewLayoutGuide key="safeArea" id="2kl-Hh-tOM"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="handleTouchButton:" destination="-1" eventType="touchUpInside" id="2gp-Eu-OeZ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="ap7-00-KbZ" firstAttribute="top" secondItem="nDm-vN-Oab" secondAttribute="top" id="0jo-wQ-jlC"/>
+                                <constraint firstAttribute="trailing" secondItem="ap7-00-KbZ" secondAttribute="trailing" constant="8" id="RJ6-3b-Ale"/>
+                                <constraint firstAttribute="height" constant="44" id="Zux-Ze-Mr3"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="FdM-IE-dNe" secondAttribute="bottom" id="92I-2Q-i1Y"/>
+                        <constraint firstItem="nDm-vN-Oab" firstAttribute="top" secondItem="HAs-ci-ZXk" secondAttribute="top" id="GBP-Bi-hYa"/>
+                        <constraint firstAttribute="trailing" secondItem="FdM-IE-dNe" secondAttribute="trailing" id="Xk0-l0-Tt1"/>
+                        <constraint firstItem="FdM-IE-dNe" firstAttribute="top" secondItem="HAs-ci-ZXk" secondAttribute="top" id="abD-wv-PWh"/>
+                        <constraint firstAttribute="trailing" secondItem="nDm-vN-Oab" secondAttribute="trailing" id="eGL-vh-0wu"/>
+                        <constraint firstItem="FdM-IE-dNe" firstAttribute="leading" secondItem="HAs-ci-ZXk" secondAttribute="leading" id="gd2-So-foE"/>
+                        <constraint firstItem="nDm-vN-Oab" firstAttribute="leading" secondItem="HAs-ci-ZXk" secondAttribute="leading" id="r8D-aO-1V2"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="fl8-ff-F4Z"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HAs-ci-ZXk" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="Ffk-Tk-eDO"/>
+                <constraint firstItem="HAs-ci-ZXk" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="aKp-aI-Rsq"/>
+                <constraint firstItem="HAs-ci-ZXk" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="gX7-2y-Cqn"/>
+                <constraint firstItem="HAs-ci-ZXk" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="44" id="iK0-R2-Lsz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>

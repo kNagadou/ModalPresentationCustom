@@ -13,6 +13,14 @@
 		FFD8D0032134E9040064ED13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD8D0022134E9040064ED13 /* Assets.xcassets */; };
 		FFD8D0062134E9040064ED13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD8D0042134E9040064ED13 /* LaunchScreen.storyboard */; };
 		FFD8D0092134E9040064ED13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8D0082134E9040064ED13 /* main.m */; };
+		FFD8D0122134E9390064ED13 /* BadCase1UISCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8D0102134E9390064ED13 /* BadCase1UISCVC.m */; };
+		FFD8D0132134E9390064ED13 /* BadCase1UISCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD8D0112134E9390064ED13 /* BadCase1UISCVC.xib */; };
+		FFD8D0162134EC560064ED13 /* CustomModalPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8D0152134EC560064ED13 /* CustomModalPresentationController.m */; };
+		FFD8D01A21350CDD0064ED13 /* SBModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8D01821350CDD0064ED13 /* SBModalViewController.m */; };
+		FFD8D01B21350CDD0064ED13 /* SBModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD8D01921350CDD0064ED13 /* SBModalViewController.xib */; };
+		FFD8D01F2135170C0064ED13 /* BadCase2UISCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8D01D2135170C0064ED13 /* BadCase2UISCVC.m */; };
+		FFD8D022213517C30064ED13 /* BadCase2UISCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD8D021213517C30064ED13 /* BadCase2UISCVC.xib */; };
+		FFD8D0252135205A0064ED13 /* CustomModalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD8D0242135205A0064ED13 /* CustomModalAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,19 @@
 		FFD8D0052134E9040064ED13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFD8D0072134E9040064ED13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFD8D0082134E9040064ED13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFD8D00F2134E9390064ED13 /* BadCase1UISCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadCase1UISCVC.h; sourceTree = "<group>"; };
+		FFD8D0102134E9390064ED13 /* BadCase1UISCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadCase1UISCVC.m; sourceTree = "<group>"; };
+		FFD8D0112134E9390064ED13 /* BadCase1UISCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadCase1UISCVC.xib; sourceTree = "<group>"; };
+		FFD8D0142134EC560064ED13 /* CustomModalPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomModalPresentationController.h; sourceTree = "<group>"; };
+		FFD8D0152134EC560064ED13 /* CustomModalPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomModalPresentationController.m; sourceTree = "<group>"; };
+		FFD8D01721350CDC0064ED13 /* SBModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBModalViewController.h; sourceTree = "<group>"; };
+		FFD8D01821350CDD0064ED13 /* SBModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBModalViewController.m; sourceTree = "<group>"; };
+		FFD8D01921350CDD0064ED13 /* SBModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SBModalViewController.xib; sourceTree = "<group>"; };
+		FFD8D01C2135170C0064ED13 /* BadCase2UISCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadCase2UISCVC.h; sourceTree = "<group>"; };
+		FFD8D01D2135170C0064ED13 /* BadCase2UISCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadCase2UISCVC.m; sourceTree = "<group>"; };
+		FFD8D021213517C30064ED13 /* BadCase2UISCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadCase2UISCVC.xib; sourceTree = "<group>"; };
+		FFD8D0232135205A0064ED13 /* CustomModalAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomModalAnimator.h; sourceTree = "<group>"; };
+		FFD8D0242135205A0064ED13 /* CustomModalAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomModalAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +83,24 @@
 				FFD8CFFA2134E9010064ED13 /* AppDelegate.m */,
 				FFD8CFFC2134E9010064ED13 /* ViewController.h */,
 				FFD8CFFD2134E9010064ED13 /* ViewController.m */,
+				FFD8D0142134EC560064ED13 /* CustomModalPresentationController.h */,
+				FFD8D0152134EC560064ED13 /* CustomModalPresentationController.m */,
+				FFD8D00F2134E9390064ED13 /* BadCase1UISCVC.h */,
+				FFD8D0102134E9390064ED13 /* BadCase1UISCVC.m */,
+				FFD8D0112134E9390064ED13 /* BadCase1UISCVC.xib */,
 				FFD8CFFF2134E9010064ED13 /* Main.storyboard */,
 				FFD8D0022134E9040064ED13 /* Assets.xcassets */,
 				FFD8D0042134E9040064ED13 /* LaunchScreen.storyboard */,
 				FFD8D0072134E9040064ED13 /* Info.plist */,
 				FFD8D0082134E9040064ED13 /* main.m */,
+				FFD8D01721350CDC0064ED13 /* SBModalViewController.h */,
+				FFD8D01821350CDD0064ED13 /* SBModalViewController.m */,
+				FFD8D01921350CDD0064ED13 /* SBModalViewController.xib */,
+				FFD8D01C2135170C0064ED13 /* BadCase2UISCVC.h */,
+				FFD8D01D2135170C0064ED13 /* BadCase2UISCVC.m */,
+				FFD8D021213517C30064ED13 /* BadCase2UISCVC.xib */,
+				FFD8D0232135205A0064ED13 /* CustomModalAnimator.h */,
+				FFD8D0242135205A0064ED13 /* CustomModalAnimator.m */,
 			);
 			path = ModalPresentationCustom;
 			sourceTree = "<group>";
@@ -128,7 +162,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD8D0132134E9390064ED13 /* BadCase1UISCVC.xib in Resources */,
+				FFD8D022213517C30064ED13 /* BadCase2UISCVC.xib in Resources */,
 				FFD8D0062134E9040064ED13 /* LaunchScreen.storyboard in Resources */,
+				FFD8D01B21350CDD0064ED13 /* SBModalViewController.xib in Resources */,
 				FFD8D0032134E9040064ED13 /* Assets.xcassets in Resources */,
 				FFD8D0012134E9010064ED13 /* Main.storyboard in Resources */,
 			);
@@ -141,9 +178,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD8D0122134E9390064ED13 /* BadCase1UISCVC.m in Sources */,
 				FFD8CFFE2134E9010064ED13 /* ViewController.m in Sources */,
 				FFD8D0092134E9040064ED13 /* main.m in Sources */,
+				FFD8D0252135205A0064ED13 /* CustomModalAnimator.m in Sources */,
+				FFD8D01A21350CDD0064ED13 /* SBModalViewController.m in Sources */,
 				FFD8CFFB2134E9010064ED13 /* AppDelegate.m in Sources */,
+				FFD8D0162134EC560064ED13 /* CustomModalPresentationController.m in Sources */,
+				FFD8D01F2135170C0064ED13 /* BadCase2UISCVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A797L6F3UU;
 				INFOPLIST_FILE = ModalPresentationCustom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A797L6F3UU;
 				INFOPLIST_FILE = ModalPresentationCustom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
