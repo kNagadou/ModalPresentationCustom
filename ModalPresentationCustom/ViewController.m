@@ -98,11 +98,11 @@ typedef NS_ENUM(NSInteger, VCType){
 {
     // カスタムした UIPresentationController を使う場合
     // CustomModalPresentationController を使うと、モーダルビュー背面に影を付ける
-//    UIPresentationController *pc = [[CustomModalPresentationController alloc] initWithPresentedViewController:presented
-//                                                                                     presentingViewController:presenting];
-//    return pc;
+    UIPresentationController *pc = [[CustomModalPresentationController alloc] initWithPresentedViewController:presented
+                                                                                     presentingViewController:presenting];
+    return pc;
     // 標準の UIPresentationController を使う場合
-     return nil;
+//     return nil;
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented

@@ -10,7 +10,8 @@
 
 @interface SBModalViewController ()
 <
-UITableViewDataSource
+UITableViewDataSource,
+UISearchBarDelegate
 >
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *headerArea;
@@ -23,6 +24,8 @@ UITableViewDataSource
 - (void)viewDidLoad {
     [super viewDidLoad];
     UISearchBar *searchBar = [[UISearchBar alloc] init];
+    searchBar.delegate = self;
+    searchBar.placeholder = @"Search";
     self.tableView.tableHeaderView = searchBar;
     [searchBar sizeToFit];
     self.modalViewConstraintTop.constant = 44;
@@ -62,6 +65,23 @@ UITableViewDataSource
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuse"];
+}
+
+#pragma mark - UISearchBarDelgate
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:YES animated:YES];
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:NO animated:YES];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:NO animated:YES];
+    [searchBar resignFirstResponder];
 }
 
 @end
